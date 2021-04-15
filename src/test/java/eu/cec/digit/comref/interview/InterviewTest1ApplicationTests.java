@@ -11,7 +11,10 @@ import java.util.UUID;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import eu.cec.digit.comref.interview.persistent.domain.Watch;
@@ -23,6 +26,8 @@ class InterviewTest1ApplicationTests {
 
 	@Autowired
 	private InterviewTest1Application interviewTest1Application;
+
+	private static final Logger log = LoggerFactory.getLogger(InterviewTest1ApplicationTests.class);
 
 	@AfterEach
 	public void cleanup() {
